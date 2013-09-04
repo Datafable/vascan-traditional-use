@@ -10,25 +10,25 @@ def check_arguments():
     infile, outfile = sys.argv[1:]
     return [infile, outfile]
 
-def createRecord(l_name, bf_and_ghabit, v_names, parts_references):
-    if "," in bf_and_ghabit:
-	family, growth_habit = bf_and_ghabit.split(",")
+def createRecord(scientific_name, family_and_habit, vernacular_names, medicinal_uses):
+    if "," in family_and_habit:
+	family, growth_habit = family_and_habit.split(",")
     else:
-	family = bf_and_ghabit
+	family = family_and_habit
 	growth_habit = ""
-    p_references = "|".join(parts_references)
-    record = [l_name, family.strip(), growth_habit.strip(), v_names, p_references]
+    p_references = "|".join(medicinal_uses)
+    record = [scientific_name, family.strip(), growth_habit.strip(), vernacular_names, p_references]
     return record
 
 def create_record_from_record_lines(record_lines):
-    latin_name, vernacular_names, parts_references1 = record_lines[0]
-    botanical_family_and_growth_habit, empty_field, parts_references2 = record_lines[1]
-    parts_references = [parts_references1, parts_references2]
+    scientific_name, vernacular_names, medicinal_uses1 = record_lines[0]
+    family_and_habit, empty_field, medicinal_uses2 = record_lines[1]
+    medicinal_uses = [medicinal_uses1, medicinal_uses2]
     if len(record_lines) > 2:
 	for remaining_line in record_lines:
 	    empty_field1, empty_field2, references3 = remaining_line
-	    parts_references.append(references3)
-    record = createRecord(latin_name, botanical_family_and_growth_habit, vernacular_names, parts_references)
+	    medicinal_uses.append(references3)
+    record = createRecord(scientific_name, family_and_habit, vernacular_names, medicinal_uses)
     return record
 
 def sortLinesPerRecord(reader):
