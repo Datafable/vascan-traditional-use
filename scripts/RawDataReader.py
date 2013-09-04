@@ -4,6 +4,9 @@ import csv
 import sys
 
 def check_arguments():
+    if len(sys.argv) != 3:
+	print "usage: ./RawDataReader.py infile outfile"
+	sys.exit(-1)
     infile, outfile = sys.argv[1:]
     return [infile, outfile]
 
