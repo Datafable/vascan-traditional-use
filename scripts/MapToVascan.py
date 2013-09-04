@@ -6,7 +6,7 @@ import csv
 import requests
 parent_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(parent_dir + "/scripts/")
-import VascanCrossMapping as vs
+import DwCReader as vs
 
 def check_arguments():
     if len(sys.argv) != 4:
@@ -45,15 +45,15 @@ def map_names_on_vascan(names, taxonfile):
     one_hits = []
     no_hits = []
     several_hits = []
-    for name in names:
-	print "mapping {0}".format(name)
-	hits = searcher.SearchOnScientificName(name)
+    for name_components in names:
+	print "mapping {0}".format(name_components)
+	hits = searcher.SearchOnScientificName(name_components["genus"], name_components["specific"], name_components["rank"], name_components["infraspecific"])
 	if len(hits) == 1:
-	    one_hits.append(name)
+	    one_hits.append(name_components)
 	elif len(hits) == 0:
-	    no_hits.append(name)
+	    no_hits.append(name_components)
 	else:
-	    several_hits.append(name)
+	    several_hits.append(name_components)
     return [one_hits, several_hits, no_hits]
 
 def printReport(one_found, several_found, none_found):
@@ -67,7 +67,6 @@ def write_output(one_found, outfile):
 def main():
     infile, vascan_taxon_file, outfile = check_arguments()
     names = getNames(infile)
-    sys.exit(-1)
     one_found, several_found, none_found = map_names_on_vascan(names, vascan_taxon_file)
     printReport(one_found, several_found, none_found)
     write_output(one_found, outfile)
