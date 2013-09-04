@@ -36,6 +36,9 @@ class VascanSearcher:
     """
     def _translateRank(self, genus, specific, infraspecific, rank):
         if specific == None and infraspecific == None:
+	    """
+	    This also takes care of sp. rank
+	    """
 	    new_rank = "genus"
 	elif rank == None and infraspecific == None:
 	    new_rank = "species"
@@ -62,7 +65,7 @@ class VascanSearcher:
 	    rank = ""
 	for taxon in self.vascan_taxon_data:
 	    taxon_id, t_genus, t_specific, t_rank, t_infraspecific = taxon
-	    if t_genus == genus.decode("latin1") and t_specific == specific.decode("latin1") and t_infraspecific == infraspecific.decode("latin1") and t_rank == rank.decode("latin1"):
+	    if t_genus.decode("latin1") == genus.decode("utf8") and t_specific.decode("latin1") == specific.decode("utf8") and t_infraspecific.decode("latin1") == infraspecific.decode("utf8") and t_rank.decode("latin1") == rank.decode("utf8"):
 		hits.append(taxon)
 	if hits == []:
 	    print "no hits for: {0}".format(str([genus, specific, infraspecific, rank]))
