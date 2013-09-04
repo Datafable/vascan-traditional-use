@@ -50,7 +50,7 @@ def readData(infilename):
     reader = csv.reader(file(infilename), delimiter="\t")
     header = reader.next()
     records = []
-    out_header = ["scientificName", "family", "habit", "rawVernacularNames", "rawMedicinalUses"]
+    out_header = ["scientificName", "family or synonym", "habit", "rawVernacularNames", "rawMedicinalUses"]
     records.append(out_header)
     lines_per_record = sortLinesPerRecord(reader)
     for record_lines in lines_per_record:
