@@ -15,18 +15,30 @@ def check_arguments():
     infile, vascan_taxon_file, outfile = sys.argv[1:]
     return [infile, vascan_taxon_file, outfile]
 
-def replace_spaces_for_request(in_names):
+def replace_spaces_and_ampersands_for_request(in_names):
     out_names = []
     for name in in_names:
-	out_name = name.replace(" ", "%20")
-	out_names.append(out_name)
+	out_name1 = name.replace(" ", "%20")
+	out_name2 = out_name1.replace("&", "and")
+	out_names.append(out_name2)
     return out_names
 
+def getJsonNameParts(names):
+    max_names_in_request = 200
+    j = 0
+    chunks = [names[i:i+max_names_in_request] for i in range(0, len(names), max_names_in_request)]
+    json_data_list = []
+    for chunk_of_names in chunks:
+	r = requests.post("http://ecat-dev.gbif.org/ws/parser?names={0}".format("|".join(chunk_of_names)))
+	json_data_list += r.json()["data"]
+    return json_data_list
+
 def parseAllNames(scientific_names):
-    names = replace_spaces_for_request(scientific_names)
-    r = requests.get("http://ecat-dev.gbif.org/ws/parser?names={0}".format("|".join(names)))
-    json = r.json()
-    output = [{"genus": x["genus"], "specific": x["specific"], "rank": x["rank"], "infraspecific": x["infraSpecific"]} for x in json["data"]]
+    names = replace_spaces_and_ampersands_for_request(scientific_names)
+    json_data = getJsonNameParts(names)
+    print "number of names sent to GBIF: {0}".format(len(names))
+    print "number of names got from GBIF: {0}".format(len(json_data))
+    output = [{"genus": x["genus"], "specific": x["specific"], "rank": x["rank"], "infraspecific": x["infraSpecific"]} for x in json_data]
     return output
 
 def getNames(infile):
@@ -37,7 +49,6 @@ def getNames(infile):
 	scientific_name = line[0]
 	names.append(scientific_name)
     name_components = parseAllNames(names)
-    print name_components
     return name_components
 
 def map_names_on_vascan(names, taxonfile):
@@ -60,6 +71,8 @@ def printReport(one_found, several_found, none_found):
     print "Nr of entries that returned one vascan hit: {0}".format(len(one_found))
     print "Nr of entries that returned several vascan hits: {0}".format(len(several_found))
     print "Nr of entries that returned no vascan hits: {0}".format(len(none_found))
+    print "thos that match several times: \n{0}".format(str(several_found))
+    print "those that don't match: \n{0}".format(str(none_found))
 
 def write_output(one_found, outfile):
     pass
