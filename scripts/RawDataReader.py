@@ -19,10 +19,6 @@ def createRecord(l_name, bf_and_ghabit, v_names, parts_references):
 
 def create_record_from_record_lines(record_lines):
     latin_name, vernacular_names, parts_references1 = record_lines[0]
-    if len(record_lines) < 2:
-	print "how did this happen?"
-	print record_lines
-    print "second line:<{0}>".format(record_lines[1])
     botanical_family_and_growth_habit, empty_field, parts_references2 = record_lines[1]
     parts_references = [parts_references1, parts_references2]
     if len(record_lines) > 2:
@@ -40,7 +36,6 @@ def sortLinesPerRecord(reader):
 	    pass;# skip empty lines
 	else:
 	    if entry_line[0] != "" and entry_line[1] != "":
-		print "new record starting at line: ", entry_line
 		if record_lines != []:
 		    lines_per_record.append(record_lines)
 		record_lines = []
