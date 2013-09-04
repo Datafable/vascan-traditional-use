@@ -21,13 +21,13 @@ def createRecord(scientific_name, family_and_habit, vernacular_names, medicinal_
     return record
 
 def create_record_from_record_lines(record_lines):
-    scientific_name, vernacular_names, medicinal_uses1 = record_lines[0]
-    family_and_habit, empty_field, medicinal_uses2 = record_lines[1]
+    scientific_name, vernacular_names, medicinal_uses1 = record_lines.pop(0)
+    family_and_habit, empty_field, medicinal_uses2 = record_lines.pop(0)
     medicinal_uses = [medicinal_uses1, medicinal_uses2]
     if len(record_lines) > 2:
-	for remaining_line in record_lines:
-	    empty_field1, empty_field2, references3 = remaining_line
-	    medicinal_uses.append(references3)
+	    for remaining_line in record_lines:
+	        empty_field1, empty_field2, references3 = remaining_line
+	        medicinal_uses.append(references3)
     record = createRecord(scientific_name, family_and_habit, vernacular_names, medicinal_uses)
     return record
 
