@@ -41,31 +41,35 @@ def parseAllNames(scientific_names):
     output = [{"genus": x["genus"], "specific": x["specific"], "rank": x["rank"], "infraspecific": x["infraSpecific"]} for x in json_data]
     return output
 
-def getNames(infile):
-    infile_reader = csv.reader(file(infile), delimiter="\t")
-    header = infile_reader.next()
+def getNames(lines):
     names = []
-    for line in infile_reader:
+    for line in lines:
 	scientific_name = line[0]
 	names.append(scientific_name)
     name_components = parseAllNames(names)
     return name_components
 
-def map_names_on_vascan(names, taxonfile):
+def map_names_on_vascan(names, incsv_lines, taxonfile):
     searcher = vs.VascanSearcher(taxon_file=taxonfile)
-    one_hits = []
-    no_hits = []
-    several_hits = []
-    for name_components in names:
+    mapped_hits = []
+    for i in range(len(names)):
+	name_components = names[i]
+	incsv_line = incsv_lines[i]
 	print "mapping {0}".format(name_components)
 	hits = searcher.SearchOnScientificName(name_components["genus"], name_components["specific"], name_components["rank"], name_components["infraspecific"])
 	if len(hits) == 1:
-	    one_hits.append(name_components)
+	    incsv_line.insert(0, "single")
+	    incsv_line.insert(0, hits[0][0])
+	    mapped_hits.append(incsv_line)
 	elif len(hits) == 0:
-	    no_hits.append(name_components)
+	    incsv_line.insert(0, "none")
+	    incsv_line.insert(0, "")
+	    mapped_hits.append(incsv_line)
 	else:
-	    several_hits.append(name_components)
-    return [one_hits, several_hits, no_hits]
+	    incsv_line.insert(0, "several")
+	    incsv_line.insert(0, "")
+	    mapped_hits.append(incsv_line)
+    return mapped_hits
 
 def printReport(one_found, several_found, none_found):
     print "Nr of entries that returned one vascan hit: {0}".format(len(one_found))
@@ -74,14 +78,28 @@ def printReport(one_found, several_found, none_found):
     print "thos that match several times: \n{0}".format(str(several_found))
     print "those that don't match: \n{0}".format(str(none_found))
 
-def write_output(one_found, outfile):
-    pass
+def write_output(outlines, outfile):
+    out = file(outfile, "w+")
+    header = ["taxon_id", "taxon_match_type", "scientificName", "family or synonym", "habit", "rawVernacularNames", "rawMedicinalUses"]
+    out.write("\t".join(header) + "\n")
+    for line in outlines:
+	out.write("\t".join(line) + "\n")
+    out.close()
+
+def getCsvLines(infile):
+    infile_reader = csv.reader(file(infile), delimiter="\t")
+    header = infile_reader.next()
+    lines = []
+    for line in infile_reader:
+	lines.append(line)
+    return lines
 
 def main():
     infile, vascan_taxon_file, outfile = check_arguments()
-    names = getNames(infile)
-    one_found, several_found, none_found = map_names_on_vascan(names, vascan_taxon_file)
-    printReport(one_found, several_found, none_found)
-    write_output(one_found, outfile)
+    incsv_lines = getCsvLines(infile)
+    names = getNames(incsv_lines)
+    mapped_hits = map_names_on_vascan(names, incsv_lines, vascan_taxon_file)
+    #printReport(mapped_hits)
+    write_output(mapped_hits, outfile)
 
 main()
