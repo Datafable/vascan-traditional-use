@@ -38,7 +38,7 @@ def sortLinesPerRecord(reader):
 	if entry_line == []:
 	    pass;# skip empty lines
 	else:
-	    if entry_line[0] != "" and entry_line[1] != "":
+	    if entry_line[1] != "":
 		if record_lines != []:
 		    lines_per_record.append(record_lines)
 		record_lines = []
