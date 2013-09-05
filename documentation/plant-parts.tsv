@@ -1,147 +1,148 @@
-<null>
-Abenaki
-Above-ground fertile shoots
-Above-ground parts
-Acorns
-Algonquians
-Algonquin
-Atikamekw
-Bark
-Bark and branches
-Bark and fruits
-Bark and gum
-Bark and leaves
-Bark and roots
-Bark and sap
-Bark and twigs
-Bark or twigs
-Bark roots
-Bark, boughs and roots
-Bark, fruits, leaves, and roots
-Bark, needles and twigs
-Berries
-Branches
-Branches and berries
-Branches and leaves
-Branches and needles
-Branches and roots
-Branchlets
-Buds
-Bulbs
-Catkins
-Charcoal
-Chippewa
-Cones
-Cones and branches
-Cones and inner bark
-Cree
-Cree, Dene, Metis
-Dene
-Dry wood
-Flower
-Flowers
-Flowers and leaves
-Frond
-Fronds
-Fruiting stalk
-Fruits
-Fruits and bark
-Fruits and leaves
-Fruits and stem
-Fruits or pith
-Fruting body
-Gum
-Gum and bark
-Inner bark
-Inner bark and branches
-Inner bark and buds
-Inner bark and cambium
-Inner bark and wood
-Innu
-Inside bark
-Leafy stem and flowers
-Leafy stems and berries
-Leaves
-Leaves and bark
-Leaves and flowers
-Leaves and fruits
-Leaves and root
-Leaves and roots
-Leaves and stalks
-Leaves and stem
-Leaves and stems
-Leaves and twigs
-Leaves or leafy stem
-Leaves or roots
-Leaves or twigs
-Leaves, flowers or fruits
-Leaves, roots and fruits
-Leaves, stalks and roots
-Leaves, stem and flowers
-Leaves, stem and roots
-Leaves, stem, bark, and roots
-Log or branch
-Malecite
-Metis
-Mi'kmaq
-Montagnais
-Needles
-Needles and inner bark
-Ojibwa
-Outer bark
-Pitch
-Pith
-Pulp
-Rhizome
-Rhizomes
-Rhizomes and roots
-Rhizomes and seeds
-Rhozomes
-Root
-Root bark
-Root bulbs
-Roots
-Roots and bark
-Roots and branches
-Roots and flowers
-Roots and fruits
-Roots and leaves
-Roots and stalk
-Roots and stem
-Roots and stems
-Roots or bark
-Roots or stem
-Roots, berries and stems
-Roots, leaves and fruits
-Rotten wood
-Runners
-Sap
-Sclerotium
-Seed heads
-Seeds
-Shoots
-Sikani
-Stalk
-Stalk and roots
-Stem
-Stem and leaves
-Stem and roots
-Stem or branch
-Stem, leaves and fruits
-Stems
-Trunk
-Twig
-Twigs
-Twigs and gum
-Twigs and leaves
-Twigs and stems
-Twigs, leaves and flowers
-Twigs/stem
-Vines
-Whole plant
-Whole plant and fruits
-Wood
-Wood and inner bark
-Young roots
-Young shoots
-Young tips, cones and branches
+plantPartSource	plantPartMapping
+<null>		
+Abenaki	<clean>
+Above-ground fertile shoots	
+Above-ground parts	
+Acorns	
+Algonquians	<clean>
+Algonquin	<clean>
+Atikamekw	<clean>
+Bark	
+Bark and branches	
+Bark and fruits	
+Bark and gum	
+Bark and leaves	
+Bark and roots	
+Bark and sap	
+Bark and twigs	
+Bark or twigs	
+Bark roots	
+Bark, boughs and roots	
+Bark, fruits, leaves, and roots	
+Bark, needles and twigs	
+Berries	
+Branches	
+Branches and berries	
+Branches and leaves	
+Branches and needles	
+Branches and roots	
+Branchlets	
+Buds	
+Bulbs	
+Catkins	
+Charcoal	
+Chippewa	<clean>
+Cones	
+Cones and branches	
+Cones and inner bark	
+Cree	<clean>
+Cree, Dene, Metis	<clean>
+Dene	<clean>
+Dry wood	
+Flower	
+Flowers	
+Flowers and leaves	
+Frond	
+Fronds	
+Fruiting stalk	
+Fruits	
+Fruits and bark	
+Fruits and leaves	
+Fruits and stem	
+Fruits or pith	
+Fruting body	
+Gum	
+Gum and bark	
+Inner bark	
+Inner bark and branches	
+Inner bark and buds	
+Inner bark and cambium	
+Inner bark and wood	
+Innu	<clean>
+Inside bark	
+Leafy stem and flowers	
+Leafy stems and berries	
+Leaves	
+Leaves and bark	
+Leaves and flowers	
+Leaves and fruits	
+Leaves and root	
+Leaves and roots	
+Leaves and stalks	
+Leaves and stem	
+Leaves and stems	
+Leaves and twigs	
+Leaves or leafy stem	
+Leaves or roots	
+Leaves or twigs	
+Leaves, flowers or fruits	
+Leaves, roots and fruits	
+Leaves, stalks and roots	
+Leaves, stem and flowers	
+Leaves, stem and roots	
+Leaves, stem, bark, and roots	
+Log or branch	
+Malecite	<clean>
+Metis	<clean>
+Mi'kmaq	<clean>
+Montagnais	<clean>
+Needles	
+Needles and inner bark	
+Ojibwa	<clean>
+Outer bark	
+Pitch	
+Pith	
+Pulp	
+Rhizome	
+Rhizomes	
+Rhizomes and roots	
+Rhizomes and seeds	
+Rhozomes	
+Root	
+Root bark	
+Root bulbs	
+Roots	
+Roots and bark	
+Roots and branches	
+Roots and flowers	
+Roots and fruits	
+Roots and leaves	
+Roots and stalk	
+Roots and stem	
+Roots and stems	
+Roots or bark	
+Roots or stem	
+Roots, berries and stems	
+Roots, leaves and fruits	
+Rotten wood	
+Runners	
+Sap	
+Sclerotium	
+Seed heads	
+Seeds	
+Shoots	
+Sikani	<clean>
+Stalk	
+Stalk and roots	
+Stem	
+Stem and leaves	
+Stem and roots	
+Stem or branch	
+Stem, leaves and fruits	
+Stems	
+Trunk	
+Twig	
+Twigs	
+Twigs and gum	
+Twigs and leaves	
+Twigs and stems	
+Twigs, leaves and flowers	
+Twigs/stem	
+Vines	
+Whole plant	
+Whole plant and fruits	
+Wood	
+Wood and inner bark	
+Young roots	
+Young shoots	
+Young tips, cones and branches	
