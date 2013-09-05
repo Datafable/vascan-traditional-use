@@ -1,5 +1,5 @@
 source name	remarks	taxonID
-Achillea sibirica Ledeb.	Possible match with Achillea alpina based on "Siberian yarrow"	2773
+Achillea sibirica Ledeb.	Potential match with Achillea alpina based on "Siberian yarrow"	2773
 Amanita muscaria Fr.	Mushroom	
 Aristolochia serpentaria L.	No match found	
 Aspidium cristatum (L.) Sw.	Possible match with Dryopteris cristata based on "dryoptère à crêtes"	5390
@@ -10,11 +10,44 @@ Chamaecyparis thyoides (L.) BSP	No match found
 Cladina rangiferina (L.) Nyl.	Lichen	
 Cladina stellaris (Opiz) Brodo	Lichen	
 Cornus foemina Mill.	No match found	
-Cornus sericea L.	Possible match with synonym Cornus sericea subsp. stolonifera based "red-osier dogwood"	14859
-Cucurbita maxima Duchesne	Possible match with Cucurbita pepo subsp. pepo based on "squash"	23859
+Cornus sericea L.	Potential match with synonym Cornus sericea subsp. stolonifera based "red-osier dogwood"	14859
+Cucurbita maxima Duchesne	Potential match with Cucurbita pepo subsp. pepo based on "squash"	23859
 Echinodontium tinctorium (Ellis & Ev.) Ellis & Ev.	Mushroom	
 Evernia mesomorpha Nyl.	Lichen	
 Fomes fomentarius (L. Ex Fries) J. Kickx f.	Mushroom	
 Fomes officinalis	Mushroom	
 Fomes pinicola (Swartz) Cooke	Mushroom	
-Helianthus occidentalis Riddell	Many possible matches for "sunflower"	
+Helianthus occidentalis Riddell	Many potential matches for "sunflower"	
+Hepatica triloba Chaix.	Potential match with one of the 3 synonym varieties of "Hepatica triloba"	
+Hierochloe odorata (L.) Beauv.	Match with synonym Hierochloë odorata	18083
+Inonotus obliquus (Ach. Ex Pers.) Pil.	Mushroom	
+Lasallia papulosa (Ach.) Llano	Lichen	
+Lycoperdon perlatum Pers.	Mushroom	
+Lycoperdon sp.	Mushroom	
+Myriosclerotinia caricis-ampullaceae (Nyberg) Buch.	Mushroom	
+Nuphar lutea (L.) Sm	Match with synonym Nuphar lutea subsp. variegata. The vernacular names support this match instead of any of the other 4 Nuphar lutea subspecies	6715
+Oligoneuron rigidum (L.) Small var. rigidum	Potential match with synonym Oligoneuron rigidum	12239
+Parmelia sulcata Taylor.	Lichen	
+Polygonatum biflorum (Walter) Elliot var. commutatum (Schult. & Schult. f.) Morong	Match with Polygonatum biflorum subsp. Commutatum	2744
+Polygonum amphibium L.	Potential match with one of the 2 synonym varieties of "Polygonum amphibium"	
+Polyporus resinosus (Schrad.) Fr.	Mushroom	
+Polyporus sp.	Mushroom	
+Pteris aquilina L.	Potential synonym of Pteridium aquilinum	5349
+Pteris sp.	No match found	
+Rumex salicifolius Weinm. var. mexicanus (Meisn.) C.L. Hitchc.	No match found	
+Salix fragilis L.	Match with Salix ×fragilis	9106
+Sphagnum capillifolium (Ehrh.) Hedw.	Moss	
+Sphagnum fuscum (Schimp.) Klinggr.	Moss	
+Stereocaulon paschale (L.) Hoffm.	Lichen	
+Toxicodendron pubescens Mill. 	Potential match with Toxicodendron radicans, based on vernacular names	
+Trametes suaveolens (L. Ex Fries) Fries.	Mushroom	
+Umbilicaria mammulata (Ach.) Tuck.	Mushroom	
+Umbilicaria muehlenbergii (Ach.) Tuck. 	Mushroom	
+Usnea hirta (L.) F. H. Wigg.	Lichen	
+Usnea sp.	Lichen	
+Vaccinium oxycoccus L.	Match with Vaccinium oxycoccos. Mismatch due to typo	5577
+Viburnum prunifolium L.	No match found	
+Acer pensylvanicum L.	Match with Acer pensylvanicum. Mismatch due to existance of identical synonym with different author	9209
+Salix cordata Michx.	Match with Salix cordata. Mismatch due to existance of identical synonym with different author	9095
+Solanum nigrum L.	Match with Solanum nigrum. Mismatch due to existance of identical synonym with different author	9381
+Viburnum opulus L. var. americanum Aiton	Match with synonym Viburnum opulus var. americanum. Mismatch due to accepted quadrinomial Viburnum opulus subsp. trilobum var. Americanum	25650
