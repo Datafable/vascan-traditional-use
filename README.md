@@ -20,6 +20,9 @@ During the 4-day course of the [#BIH13 conference](http://conference.lifewatch.u
 4. Run the `scientificName` through the [GBIF name parser](http://tools.gbif.org/nameparser/) and try to match the returned `genus`, `specificEpithet`, `infraspecificEpithet` and `taxonRank` with data from [VASCAN](http://dx.doi.org/10.5886/1bft7W5f). [[script](scripts/MapToVascan.py)]
 
    Of the `545` names, `493` had one exact match, `48` no match, and `4` several matches. We tried to explain the mismatches [here](documentation/mismatch-remarks.tsv).
-5. Realize that there are too many vernacular name languages ([14](documentation/language-mapping.tsv)) and especially used plant parts ([129](documentation/plant-parts-mapping.tsv)) to express this in a flat file.
-6. Express the vernacular names as a [vernacularName extension](http://rs.gbif.org/extension/gbif/1.0/vernacularname.xml). [[script](scripts/splitVernacularNames.py)]
-10. Catch up on sleep.
+5. Realize that there are too many vernacular name languages ([14](documentation/language-mapping.tsv)) and especially used plant parts ([129](documentation/plant-parts-mapping.tsv)) to express this in a flat file. Express as a Darwin Core Archive instead. [[target format file](documentation/target-format.md)]
+6. Express the `scientificName`, `family` and mapping to VASCAN in a [Taxon Core](http://rs.gbif.org/core/dwc_taxon.xml). We also included the non-DwC term `_habit`.
+6. Express the vernacular names in a [VernacularName extension](http://rs.gbif.org/extension/gbif/1.0/vernacularname.xml). [[script](scripts/splitVernacularNames.py)]. Languages are mapped to their [ISO 639-3](http://en.wikipedia.org/wiki/ISO_639-3) code (the ISO 693-1 code as requested in `dwc:language` does not capture all languages). [[mapping file](documentation/language-mapping.tsv)] We also included the non-DwC term `_languageName`
+7. Express the traditional medicinal use in a [Description extension](http://rs.gbif.org/extension/gbif/1.0/description.xml). Currently, the full description includes parts, uses and sources and is not marked up as HTML. We also included the non-DwC term `_plantPart`, which are reconciled. [[mapping file](document/plant-parts-mapping.tsv)]
+8. Add a `meta.xml` file. [[file](data/dwc-a/meta.xml)]
+9. Catch up on sleep.
