@@ -12,6 +12,13 @@ The paper:
 
 During the 4-day course of the [#BIH13 conference](http://conference.lifewatch.unisalento.it/index.php/EBIC/BIH2013), we will attempt to transform the data to a usable CSV file and link the data up with the [Database of Vascular Plants of Canada (VASCAN)](http://data.canadensys.net/vascan/), in which @peterdesmet is [involved](https://github.com/peterdesmet/vascan-data-paper).
 
+## Result
+
+We managed to translate the dataset into a Darwin Core Archive, within the timeframe of the conference. See "Steps" below for the full details.
+
+* [Structure of the archive](data/dwc-a)
+* [Download the archive](data/dwc-a.zip)
+
 ## Steps
 
 1. Copy/paste the [Word table](data/raw/medicinal-plants.doc) to a [CSV file](data/raw/medicinal-plants.tsv).
