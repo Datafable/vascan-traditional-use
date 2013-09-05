@@ -41,6 +41,24 @@ def translate_language(lang_string):
 	"Montagnais/Innu": "Montagnais/Innu",
 	"Ojibwa": "Ojibwa",
     }
+    iso_cod_voc = {
+	"Abenaki": "ISO 639:aaq",
+	"Algonquian": "ISO 639:alg",
+	"Algonquin": "ISO 639:alq",
+	"Atikamekw": "ISO 639:atj",
+	"Chipewyan": "ISO 639:chp",
+	"Chippewa": "ISO 639:ciw",
+	"Cree": "ISO 639:cre",
+	"Dene": "ISO 639:chp",
+	"English": "ISO 639:eng",
+	"French": "ISO 639:fra",
+	"Innu": "ISO 639:moe",
+	"Malecite": "ISO 639:pgm",
+	"Mi'kmaq": "ISO 639:mic",
+	"Montagnais": "ISO 639:moe",
+	"Ojibwa": "ISO 639:oje"
+    }
+
     if lang_string not in language_voc.keys():
 	raise Exception("Could not translate language: {0}".format(lang_string))
     return language_voc[lang_string]
