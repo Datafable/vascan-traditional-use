@@ -9,4 +9,7 @@ echo "usage: ./scripts/runall.sh /full/path/to/vascan/taxon.txt"
 ./scripts/MapToVascan.py ./data/processed/OneLinePerRecord.tsv $1 ./data/processed/Mapped.tsv
 
 # split vernacular names
-./scripts/SplitVernecularNames.py data/processed/Mapped.tsv data/processed/names.tsv data/processed/taxon.tsv
+./scripts/SplitVernecularNames.py data/processed/Mapped.tsv data/processed/vernacularname.tsv data/processed/taxon_names_split.tsv
+
+# split medicinal uses
+./scripts/SplitMedicinalUse.py ./data/processed/taxon_names_split.tsv ./data/processed/medicinaluse.tsv ./data/processed/taxon.tsv
