@@ -59,7 +59,7 @@ def map_names_on_vascan(names, incsv_lines, taxonfile):
 	hits = searcher.SearchOnScientificName(name_components["genus"], name_components["specific"], name_components["rank"], name_components["infraspecific"])
 	if len(hits) == 1:
 	    incsv_line.insert(0, "single")
-	    incsv_line.insert(0, hits[0][0])
+	    incsv_line.insert(0, "http://data.canadensys.net/vascan/taxon/" + hits[0][0])
 	    mapped_hits.append(incsv_line)
 	elif len(hits) == 0:
 	    incsv_line.insert(0, "none")
