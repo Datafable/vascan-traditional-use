@@ -21,7 +21,7 @@ def readInput(infile):
     return lines
 
 def translate_part(part_string):
-    return part_string
+    return part_string.lower()
     """
     parts_voc = {
 	"": "",
