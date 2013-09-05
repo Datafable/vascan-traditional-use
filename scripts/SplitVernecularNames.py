@@ -7,7 +7,7 @@ import re
 
 def check_arguments():
     if len(sys.argv) != 4:
-	print "usage: ./SplitVernecularNames.py infile names_outfile core_outfile"
+	print "usage: ./SplitVernecularNames.py infile names_outfile taxon_outfile"
 	sys.exit(-1)
     infile, names_outfile, taxon_outfile = sys.argv[1:]
     return [infile, names_outfile, taxon_outfile]
