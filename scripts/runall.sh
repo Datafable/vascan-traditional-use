@@ -12,4 +12,4 @@ echo "usage: ./scripts/runall.sh /full/path/to/vascan/taxon.txt"
 ./scripts/SplitVernacularNames.py data/processed/Mapped.tsv data/dwc-a/vernacularname.tsv data/processed/taxon_names_split.tsv
 
 # split medicinal uses
-./scripts/SplitMedicinalUse.py ./data/processed/taxon_names_split.tsv ./data/dwc-a/medicinaluse.tsv ./data/dwc-a/taxon.tsv
+./scripts/SplitMedicinalUse.py ./data/processed/taxon_names_split.tsv ./data/dwc-a/medicinaluse.tsv ./data/dwc-a/taxon.tsv ./documentation/plant-parts-mapping.tsv 
