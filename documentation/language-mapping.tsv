@@ -1,15 +1,15 @@
-language	languageISOCode
-Abenaki	
-Algonquian	
-Atikamekw	
-Chipewyan	
-Chippewa	
-Cree	CR
-Dene	
-English	EN
-French	FR
-Innu	
-Malecite	
-Mi'kmaq	
-Montagnais	
-Ojibwa	OJ
+language	ISO 639-1	ISO 639-3	URL
+Abenaki		aaq|abe	http://en.wikipedia.org/wiki/Abenaki_language
+Algonquian		alq	http://en.wikipedia.org/wiki/Algonquin_language
+Atikamekw		atj	http://en.wikipedia.org/wiki/Atikamekw_language
+Chipewyan		chp	http://en.wikipedia.org/wiki/Chipewyan_language
+Chippewa		ciw	http://en.wikipedia.org/wiki/Chippewa_language
+Cree	CR	cre	http://en.wikipedia.org/wiki/Cree_language
+Dene		chp	http://en.wikipedia.org/wiki/Dene_language
+English	EN	eng	http://en.wikipedia.org/wiki/English_language
+French	FR	fra	http://en.wikipedia.org/wiki/French_language
+Innu		moe	http://en.wikipedia.org/wiki/Innu_language
+Malecite	pgm		http://en.wikipedia.org/wiki/Malecite-Passamaquoddy_language
+Mi'kmaq		mic	http://en.wikipedia.org/wiki/Mi'kmaq_language
+Montagnais		moe	http://en.wikipedia.org/wiki/Montagnais_language
+Ojibwa	OJ	oje	http://en.wikipedia.org/wiki/Ojibwe_language
