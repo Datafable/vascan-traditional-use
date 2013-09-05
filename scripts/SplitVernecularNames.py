@@ -41,7 +41,8 @@ def translate_language(lang_string):
 	"Montagnais/Innu": "Montagnais/Innu",
 	"Ojibwa": "Ojibwa",
     }
-    iso_cod_voc = {
+    iso_code_voc = {
+	"": "",
 	"Abenaki": "ISO 639:aaq",
 	"Algonquian": "ISO 639:alg",
 	"Algonquin": "ISO 639:alq",
@@ -61,7 +62,14 @@ def translate_language(lang_string):
 
     if lang_string not in language_voc.keys():
 	raise Exception("Could not translate language: {0}".format(lang_string))
-    return language_voc[lang_string]
+    language_name = language_voc[lang_string]
+    if "/" in language_name:
+	l_names = language_name.split("/")
+	for l_name in l_names:
+	    language_iso_code = iso_code_voc[l_name]
+    else:
+	language_iso_code = iso_code_voc[language_name]
+    return [language_name, language_iso_code]
 
 def splitNamesFromLines(inlines):
     outlines = []
@@ -78,12 +86,12 @@ def splitNamesFromLines(inlines):
 		    v_names = groups[0].strip()
 		    in_language = groups[1].strip()
 		    try:
-			language = translate_language(in_language)
+			language_name, language_iso_code = translate_language(in_language)
 		    except Exception as e:
 			print "problem while translating the language {0} from the names {1}".format(in_language, name)
 			raise e
 		    for v_name in v_names.split(","):
-			outline = [inline_id, vascan_taxon_id, language, v_name.strip()]
+			outline = [inline_id, v_name.strip(), vascan_taxon_id, language_iso_code, "http://doi.org/10.1186/1746-4269-8-7", language_name]
 			outlines.append(outline)
 		else:
 		    raise Exception("Could not parse name: {0}".format(name))
@@ -106,7 +114,7 @@ def writeTaxonOutput(taxon_outfile, outlines):
 
 def writeNamesOutput(names_outfile, outlines):
     out = file(names_outfile, "w+")
-    header = ["id", "_vascanTaxonID", "_languageName", "vernacularName"]
+    header = ["id", "vernacularName", "language", "_vascanTaxonID", "source", "_languageName"]
     outlines.insert(0, header)
     for line in outlines:
 	out.write("\t".join(line) + "\n")
