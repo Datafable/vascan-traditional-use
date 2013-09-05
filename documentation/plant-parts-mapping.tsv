@@ -1,12 +1,8 @@
 plantPartSource	plantPartMapping
 	
-Abenaki	<clean>
 Above-ground fertile shoots	Above-ground fertile shoots
 Above-ground parts	Above-ground parts
 Acorns	Acorns
-Algonquians	<clean>
-Algonquin	<clean>
-Atikamekw	<clean>
 Bark	Bark
 Bark and branches	Bark & branches
 Bark and fruits	Bark & fruits
@@ -31,13 +27,9 @@ Buds	Buds
 Bulbs	Bulbs
 Catkins	Catkins
 Charcoal	Charcoal
-Chippewa	<clean>
 Cones	Cones
 Cones and branches	Cones & branches
 Cones and inner bark	Cones & inner bark
-Cree	<clean>
-Cree, Dene, Metis	<clean>
-Dene	<clean>
 Dry wood	Dry wood
 Flower	Flowers
 Flowers	Flowers
@@ -58,7 +50,6 @@ Inner bark and branches	Inner bark & branches
 Inner bark and buds	Inner bark & buds
 Inner bark and cambium	Inner bark & cambium
 Inner bark and wood	Inner bark & wood
-Innu	<clean>
 Inside bark	Inside bark
 Leafy stem and flowers	Leafy stem & flowers
 Leafy stems and berries	Leafy stems & berries
@@ -82,13 +73,8 @@ Leaves, stem and flowers	Leaves, stem & flowers
 Leaves, stem and roots	Leaves, stem & roots
 Leaves, stem, bark, and roots	Leaves, stem, bark & roots
 Log or branch	Log & branch
-Malecite	<clean>
-Metis	<clean>
-Mi'kmaq	<clean>
-Montagnais	<clean>
 Needles	Needles
 Needles and inner bark	Needles & inner bark
-Ojibwa	<clean>
 Outer bark	Outer bark
 Pitch	Pitch
 Pith	Pith
@@ -121,7 +107,6 @@ Sclerotium	Sclerotium
 Seed heads	Seed heads
 Seeds	Seeds
 Shoots	Shoots
-Sikani	<clean>
 Stalk	Stalk
 Stalk and roots	Roots & stalk
 Stem	Stem
