@@ -91,7 +91,7 @@ def splitNamesFromLines(inlines):
 			print "problem while translating the language {0} from the names {1}".format(in_language, name)
 			raise e
 		    for v_name in v_names.split(","):
-			outline = [inline_id, v_name.strip(), vascan_taxon_id, language_iso_code, "http://doi.org/10.1186/1746-4269-8-7", language_name]
+			outline = [inline_id, v_name.strip(), "http://doi.org/10.1186/1746-4269-8-7", language_iso_code, language_name]
 			outlines.append(outline)
 		else:
 		    raise Exception("Could not parse name: {0}".format(name))
@@ -114,7 +114,7 @@ def writeTaxonOutput(taxon_outfile, outlines):
 
 def writeNamesOutput(names_outfile, outlines):
     out = file(names_outfile, "w+")
-    header = ["id", "vernacularName", "language", "_vascanTaxonID", "source", "_languageName"]
+    header = ["id", "vernacularName", "source", "language", "_languageName"]
     outlines.insert(0, header)
     for line in outlines:
 	out.write("\t".join(line) + "\n")
