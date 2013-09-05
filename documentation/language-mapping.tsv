@@ -1,16 +1,16 @@
-language	ISO 639-1	ISO 639-3	URL
-Abenaki		aaq	http://en.wikipedia.org/wiki/Abenaki_language
-Algonquian			http://en.wikipedia.org/wiki/Algonquian_languages
-Algonquin		alq	http://en.wikipedia.org/wiki/Algonquin_language
-Atikamekw		atj	http://en.wikipedia.org/wiki/Atikamekw_language
-Chipewyan		chp	http://en.wikipedia.org/wiki/Chipewyan_language
-Chippewa		ciw	http://en.wikipedia.org/wiki/Chippewa_language
-Cree	CR	cre	http://en.wikipedia.org/wiki/Cree_language
-Dene		chp	http://en.wikipedia.org/wiki/Dene_language
-English	EN	eng	http://en.wikipedia.org/wiki/English_language
-French	FR	fra	http://en.wikipedia.org/wiki/French_language
-Innu		moe	http://en.wikipedia.org/wiki/Innu_language
-Malecite		pgm	http://en.wikipedia.org/wiki/Malecite-Passamaquoddy_language
-Mi'kmaq		mic	http://en.wikipedia.org/wiki/Mi'kmaq_language
-Montagnais		moe	http://en.wikipedia.org/wiki/Montagnais_language
-Ojibwa	OJ	oje	http://en.wikipedia.org/wiki/Ojibwe_language
+language	ISO 639-1	ISO 639-3	dwcValue	URL
+Abenaki		aaq	ISO 639:aaq	http://en.wikipedia.org/wiki/Abenaki_language
+Algonquian			ISO 639:alg	http://en.wikipedia.org/wiki/Algonquian_languages
+Algonquin		alq	ISO 639:alq	http://en.wikipedia.org/wiki/Algonquin_language
+Atikamekw		atj	ISO 639:atj:	http://en.wikipedia.org/wiki/Atikamekw_language
+Chipewyan		chp	ISO 639:chp	http://en.wikipedia.org/wiki/Chipewyan_language
+Chippewa		ciw	ISO 639:ciw	http://en.wikipedia.org/wiki/Chippewa_language
+Cree	CR	cre	ISO 639:cre	http://en.wikipedia.org/wiki/Cree_language
+Dene		chp	ISO 639:chp	http://en.wikipedia.org/wiki/Dene_language
+English	EN	eng	ISO 639:eng	http://en.wikipedia.org/wiki/English_language
+French	FR	fra	ISO 639:fra	http://en.wikipedia.org/wiki/French_language
+Innu		moe	ISO 639:moe	http://en.wikipedia.org/wiki/Innu_language
+Malecite		pgm	ISO 639:pgm	http://en.wikipedia.org/wiki/Malecite-Passamaquoddy_language
+Mi'kmaq		mic	ISO 639:mic	http://en.wikipedia.org/wiki/Mi'kmaq_language
+Montagnais		moe	ISO 639:moe	http://en.wikipedia.org/wiki/Montagnais_language
+Ojibwa	OJ	oje	ISO 639:oje	http://en.wikipedia.org/wiki/Ojibwe_language
