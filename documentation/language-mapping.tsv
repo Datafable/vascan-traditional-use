@@ -6,11 +6,13 @@ Atikamekw	Atikamekw		atj	ISO 639:atj	http://en.wikipedia.org/wiki/Atikamekw_lang
 Chipewyan	Chipewyan		chp	ISO 639:chp	http://en.wikipedia.org/wiki/Chipewyan_language
 Chippewa	Chippewa		ciw	ISO 639:ciw	http://en.wikipedia.org/wiki/Chippewa_language
 Cree	Cree	CR	cre	ISO 639:cre	http://en.wikipedia.org/wiki/Cree_language
-Dene			chp	ISO 639:chp	http://en.wikipedia.org/wiki/Dene_language
+Dene	Chipewyan	chp	ISO 639:chp	http://en.wikipedia.org/wiki/Dene_language
 Eng.	English	EN	eng	ISO 639:eng	http://en.wikipedia.org/wiki/English_language
 Fr.	French	FR	fra	ISO 639:fra	http://en.wikipedia.org/wiki/French_language
 Innu	Montagnais		moe	ISO 639:moe	http://en.wikipedia.org/wiki/Innu_language
+Innu/Montagnais	Montagnais		moe	ISO 639:moe	http://en.wikipedia.org/wiki/Innu_language
 Malecite	Malecite-Passamaquoddy		pgm	ISO 639:pgm	http://en.wikipedia.org/wiki/Malecite-Passamaquoddy_language
 Mi'kmaq	Mi'kmaq		mic	ISO 639:mic	http://en.wikipedia.org/wiki/Mi'kmaq_language
 Montagnais	Montagnais		moe	ISO 639:moe	http://en.wikipedia.org/wiki/Montagnais_language
+Montagnais/Innu	Montagnais		moe	ISO 639:moe	http://en.wikipedia.org/wiki/Innu_language
 Ojibwa	Ojibwe	OJ	oje	ISO 639:oje	http://en.wikipedia.org/wiki/Ojibwe_language
