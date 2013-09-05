@@ -30,16 +30,16 @@ def translate_language(lang_string):
 	"Chipewyan": "Chipewyan",
 	"Chippewa": "Chippewa",
 	"Cree": "Cree",
-	"Dene": "Dene",
+	"Dene": "Chipewyan",
 	"Eng.": "English",
 	"Fr.": "French",
-	"Innu": "Innu",
-	"Innu/Montagnais": "Montagnais/Innu",
+	"Innu": "Montagnais",
+	"Innu/Montagnais": "Montagnais",
 	"Malecite": "Malecite",
 	"Mi'kmaq": "Mi'kmaq",
 	"Montagnais": "Montagnais",
-	"Montagnais/Innu": "Montagnais/Innu",
-	"Ojibwa": "Ojibwa",
+	"Montagnais/Innu": "Montagnais",
+	"Ojibwa": "Ojibwe"
     }
     iso_code_voc = {
 	"": "",
