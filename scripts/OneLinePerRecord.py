@@ -17,7 +17,7 @@ def createRecord(scientific_name, family_and_habit, vernacular_names, medicinal_
 	family = family_and_habit
 	growth_habit = ""
     p_references = "|".join(medicinal_uses)
-    record = [scientific_name, family.strip(), growth_habit.strip(), vernacular_names, p_references]
+    record = [scientific_name.strip(), family.strip(), growth_habit.strip(), vernacular_names.strip(), p_references.strip()]
     return record
 
 def create_record_from_record_lines(record_lines):
