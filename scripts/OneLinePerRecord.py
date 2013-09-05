@@ -2,6 +2,7 @@
 
 import csv
 import sys
+import re
 
 def check_arguments():
     if len(sys.argv) != 3:
@@ -10,25 +11,39 @@ def check_arguments():
     infile, outfile = sys.argv[1:]
     return [infile, outfile]
 
-def createRecord(scientific_name, family_and_habit, vernacular_names, medicinal_uses):
-    if "," in family_and_habit:
-	family, growth_habit = family_and_habit.split(",")
-    else:
-	family = family_and_habit
-	growth_habit = ""
+def createRecord(scientific_name, family_habit_and_synonym, vernacular_names, medicinal_uses):
+    family = ""
+    synonym = ""
+    habit = ""
+    for field in family_habit_and_synonym:
+	match = re.match("Syn\.*:(.*)", field)
+	if match != None:
+	    synonym = match.groups()[0].strip()
+	else:
+	    if "," in field:
+		list1 = field.split(",")
+		family = list1[0].strip()
+		habit = list1[1].strip()
+	    else:
+		family = field
+		habit = ""
     p_references = "|".join(medicinal_uses)
-    record = [scientific_name.strip(), family.strip(), growth_habit.strip(), vernacular_names.strip(), p_references.strip()]
+    record = [scientific_name.strip(), family.strip(), synonym.strip(), habit.strip(), vernacular_names.strip(), p_references.strip()]
     return record
 
 def create_record_from_record_lines(record_lines):
     scientific_name, vernacular_names, medicinal_uses1 = record_lines.pop(0)
-    family_and_habit, empty_field, medicinal_uses2 = record_lines.pop(0)
+    family_and_habit1, empty_field, medicinal_uses2 = record_lines.pop(0)
     medicinal_uses = [medicinal_uses1, medicinal_uses2]
-    if len(record_lines) > 2:
+    family_habit_and_synonyms = [family_and_habit1]
+    if len(record_lines) > 0:
 	    for remaining_line in record_lines:
 	        empty_field1, empty_field2, references3 = remaining_line
+		if empty_field1 != "":
+		    """ not so empty => might contain family or synonym!"""
+		    family_habit_and_synonyms.append(empty_field1)
 	        medicinal_uses.append(references3)
-    record = createRecord(scientific_name, family_and_habit, vernacular_names, medicinal_uses)
+    record = createRecord(scientific_name, family_habit_and_synonyms, vernacular_names, medicinal_uses)
     return record
 
 def sortLinesPerRecord(reader):
@@ -50,7 +65,7 @@ def readData(infilename):
     reader = csv.reader(file(infilename), delimiter="\t")
     header = reader.next()
     records = []
-    out_header = ["scientificName", "family or synonym", "habit", "rawVernacularNames", "rawMedicinalUses"]
+    out_header = ["scientificName", "family", "synonym", "habit", "rawVernacularNames", "rawMedicinalUses"]
     records.append(out_header)
     lines_per_record = sortLinesPerRecord(reader)
     for record_lines in lines_per_record:
