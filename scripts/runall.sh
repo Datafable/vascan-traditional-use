@@ -7,3 +7,6 @@ echo "usage: ./scripts/runall.sh /full/path/to/vascan/taxon.txt"
 
 # cross map with vascan; the $1 will be filled in by your command line argument and should point to the vascan taxon.txt file
 ./scripts/MapToVascan.py ./data/processed/OneLinePerRecord.tsv $1 ./data/processed/Mapped.tsv
+
+# split vernacular names
+./scripts/SplitVernecularNames.py data/processed/Mapped.tsv data/processed/names.tsv data/processed/taxon.tsv
