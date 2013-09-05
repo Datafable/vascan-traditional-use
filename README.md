@@ -20,6 +20,6 @@ During the 4-day course of the [#BIH13 conference](http://conference.lifewatch.u
 4. Run the `scientificName` through the [GBIF name parser](http://tools.gbif.org/nameparser/) and try to match the returned `genus`, `specificEpithet`, `infraspecificEpithet` and `taxonRank` with data from [VASCAN](http://dx.doi.org/10.5886/1bft7W5f). [[script](scripts/MapToVascan.py)]
 
    Of the `545` names, `493` had one exact match, `48` no match, and `4` several matches. We tried to explain the mismatches [here](documentation/mismatch-remarks.tsv).
-5. Realize that there are too many vernacular name languages ([14](documentation/language-mapping.tsv)) and especially used plant parts ([129](documentation/plant-parts.txt)) to express this in a flat file.
+5. Realize that there are too many vernacular name languages ([14](documentation/language-mapping.tsv)) and especially used plant parts ([129](documentation/plant-parts-mapping.tsv)) to express this in a flat file.
 6. Express the vernacular names as a [vernacularName extension](http://rs.gbif.org/extension/gbif/1.0/vernacularname.xml). [[script](scripts/splitVernacularNames.py)]
 10. Catch up on sleep.
