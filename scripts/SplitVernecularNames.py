@@ -24,9 +24,8 @@ def translate_language(lang_string):
     language_voc = {
 	"": "",
 	"Abenaki": "Abenaki",
-	"Abénaki": "Abenaki",
 	"Algonquian": "Algonquian",
-	"Algonquin": "Algonquian",
+	"Algonquin": "Algonquin",
 	"Atikamekw": "Atikamekw",
 	"Chipewyan": "Chipewyan",
 	"Chippewa": "Chippewa",
@@ -37,13 +36,10 @@ def translate_language(lang_string):
 	"Innu": "Innu",
 	"Innu/Montagnais": "Montagnais/Innu",
 	"Malecite": "Malecite",
-	"malecite": "Malecite",
-	"Melatice": "Malecite",
 	"Mi'kmaq": "Mi'kmaq",
 	"Montagnais": "Montagnais",
 	"Montagnais/Innu": "Montagnais/Innu",
 	"Ojibwa": "Ojibwa",
-	"Ojiwe": "Ojibwa"
     }
     if lang_string not in language_voc.keys():
 	raise Exception("Could not translate language: {0}".format(lang_string))
