@@ -16,8 +16,8 @@ Definition: <http://rs.gbif.org/extension/gbif/1.0/vernacularname.xml>
 
 	id					1
 	vernacularName		jîngo'b
-	language			ISO639-3:oje
 	source				http://doi.org/10.1186/1746-4269-8-7
+	language			ISO639-3:oje
 	_languageName		Ojibwa
 
 ## Extension: `medicinaluse.txt`
