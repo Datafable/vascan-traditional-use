@@ -80,7 +80,7 @@ def printReport(one_found, several_found, none_found):
 
 def write_output(outlines, outfile):
     out = file(outfile, "w+")
-    header = ["taxon_id", "taxon_match_type", "scientificName", "family or synonym", "habit", "rawVernacularNames", "rawMedicinalUses"]
+    header = ["taxon_id", "taxon_match_type", "scientificName", "family", "synonym", "habit", "rawVernacularNames", "rawMedicinalUses"]
     out.write("\t".join(header) + "\n")
     for line in outlines:
 	out.write("\t".join(line) + "\n")
