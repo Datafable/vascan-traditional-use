@@ -80,10 +80,13 @@ def printReport(one_found, several_found, none_found):
 
 def write_output(outlines, outfile):
     out = file(outfile, "w+")
-    header = ["taxon_id", "taxon_match_type", "scientificName", "family", "synonym", "habit", "rawVernacularNames", "rawMedicinalUses"]
+    header = ["id", "vascan_taxon_id", "taxon_match_type", "scientificName", "family", "synonym", "habit", "rawVernacularNames", "rawMedicinalUses"]
     out.write("\t".join(header) + "\n")
+    id = 1
     for line in outlines:
+	line.insert(0, str(id))
 	out.write("\t".join(line) + "\n")
+	id += 1
     out.close()
 
 def getCsvLines(infile):
