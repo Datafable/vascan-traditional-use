@@ -57,7 +57,7 @@ def translate_language(lang_string):
 	"Malecite": "ISO 639:pgm",
 	"Mi'kmaq": "ISO 639:mic",
 	"Montagnais": "ISO 639:moe",
-	"Ojibwa": "ISO 639:oje"
+	"Ojibwe": "ISO 639:oje"
     }
 
     if lang_string not in language_voc.keys():
