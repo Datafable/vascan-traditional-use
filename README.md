@@ -32,4 +32,4 @@ We managed to translate the dataset into a Darwin Core Archive, within the timef
 6. Express the vernacular names in a [VernacularName extension](http://rs.gbif.org/extension/gbif/1.0/vernacularname.xml). [[script](scripts/splitVernacularNames.py)]. Languages are mapped to their [ISO 639-3](http://en.wikipedia.org/wiki/ISO_639-3) code (the ISO 693-1 code as requested in `dwc:language` does not capture all languages). [[mapping file](documentation/language-mapping.tsv)] We also included the non-DwC term `_languageName`.
 7. Express the traditional medicinal use in a [Description extension](http://rs.gbif.org/extension/gbif/1.0/description.xml). Currently, the full description includes parts, uses and sources, but is not marked up as HTML. We also included the non-DwC term `_plantPart`, which are reconciled. [[mapping file](documentation/plant-parts-mapping.tsv)]
 8. Add a `meta.xml` file. [[file](data/dwc-a/meta.xml)]
-9. Catch up on sleep.
+9. Catch up on [sleep](https://github.com/peterdesmet/vascan-traditional-use/graphs/punch-card).
