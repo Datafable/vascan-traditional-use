@@ -72,7 +72,7 @@ def removeUsesFromLines(inlines):
     outlines = []
     for line in inlines:
 	id, taxon_concept, match_type, scientific_name, family, synonym, habit, medicinal_use = line
-	outlines.append([id, taxon_concept, scientific_name, family, habit])
+	outlines.append([id, taxon_concept, scientific_name, family, habit.lower()])
     return outlines
 
 def writeTaxonOutput(taxon_outfile, outlines):
