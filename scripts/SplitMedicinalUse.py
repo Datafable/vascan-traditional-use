@@ -38,19 +38,16 @@ def parseUse(use, plant_parts_vocabulary):
 	if match != None:
 	    groups = match.groups()
 	    in_part = groups[0].strip()
-	    use_description = groups[1].strip()
 	    try:
 		part = translate_part(in_part, plant_parts_vocabulary)
 	    except Exception as e:
 		print "problem while translating the part {0} from the uses {1}".format(in_part, use)
 		raise e
 	else:
-	    use_description = use
 	    part = ""
     else:
-	use_description = use
 	part = ""
-    return [part, use_description]
+    return [part, use]
 
 def splitUsesFromLines(inlines, plant_parts_vocabulary):
     outlines = []
